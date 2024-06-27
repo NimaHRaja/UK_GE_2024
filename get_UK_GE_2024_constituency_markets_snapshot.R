@@ -10,3 +10,5 @@ results <-
                total_matched = MarketBook$MarketBook[[1]]$raw$totalMatched,
                constituency = MarketBook$Catalogue$raw$marketName) 
            }))
+
+# write.csv(results, "constituency_totalmatched_27JUN24.csv", row.names = FALSE)

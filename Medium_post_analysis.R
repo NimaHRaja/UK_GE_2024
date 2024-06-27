@@ -1,0 +1,5 @@
+sum(results$total_matched)
+results %>% filter(total_matched <= 0) %>% dim()
+results %>% filter(total_matched <= 25) %>% dim()
+results %>% arrange(-total_matched) %>% head(10) %>% summarise(sum(total_matched))
+results %>% arrange(-total_matched) %>% head(20) %>% write.csv("hot_constituencies_27JUN24.csv", row.names = FALSE)

@@ -1,9 +1,11 @@
 source("init.R")
 
-all_politics_events <- my_bf$events(filter = marketFilter(eventTypeIds = 2378961)) 
+all_politics_events <- 
+  my_bf$events(filter = marketFilter(eventTypeIds = 2378961)) 
 
 constituency_events <- 
-  all_politics_events[grepl("UK - General Election", all_politics_events$event_name),] %>% 
+  all_politics_events[grepl("UK - General Election", 
+                            all_politics_events$event_name),] %>% 
   select(event_id) %>% unlist() %>% as.numeric()
 
 constituency_markets <- 
